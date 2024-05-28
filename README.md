@@ -26,10 +26,10 @@ stddev(Total_Revenue) AS STD_DEV_REV
 FROM Monthly_Rev
 GROUP BY ProductName;
 ```
-![Result 1](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/9d416207-595e-4f0a-9857-39549fb3f190)
+![Result 1](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/9d416207-595e-4f0a-9857-39549fb3f190)<br>
 
 #### Analysis
-
+The expert product subscription genertaed more revenue than the basic one over the months however had a higher standard deviation. So although the "expert" product subscription generated a higher revenue, the revenue from the basic subscription was more consistent across the months and centered across the mean. <br><br>
 ### Tracking the performance of a recent email campaign
 #### Code
 ```sql
