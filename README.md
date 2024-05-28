@@ -44,8 +44,9 @@ SELECT NUM_LINK_CLICKS,COUNT(USERID) AS NUM_USERS
 FROM Clicks_per_user
 GROUP BY NUM_LINK_CLICKS
 ```
-![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/62b96912-981e-4d6a-8167-87b719c5989f)
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/62b96912-981e-4d6a-8167-87b719c5989f)<br>
 #### Analysis
+Based on the results obtained, it can be seen that about half of the users returned to the email to click on the link  multiple times in order to reach a unique landing page that could only be accesed from within the campaign email. These insigts would be useful for the marketing team in order to understand how the users are interacting with the email link.<br><br>
 
 ### Payment Funnel Analysis
 Understanding the farthest point the users are getting to within the payment process and where they are dropping off. This is a request from the product manager
