@@ -79,8 +79,10 @@ GROUP BY paymentfunnelstage
 
 #### Analysis
 There are 25 total users out of which 12 (roughly half of the total users) have successfully signed up for the product subscription. 7 of them have opened the paymnet widget but haven't taken any further steps. A samll chunk of users are facing some technical issues with the payment processing either on the vendor side or due to their own user error. At this stage some of the following measures can be taken: 
+* Address the reasons why 12% of users (3 out of 25)  do not start the payment process. Improve call-to-action clarity and page design to guide users towards starting the process.
 * Investigating and fixing vendor-related payment processing issues to prevent user frustration.
-* Focus on reducing the drop-off from opening the widget to entering payment details by simplifying it's design and making the transition to entering details smoother.<br>
+* Focus on reducing the drop-off from opening the widget to entering payment details by simplifying it's design and making the transition to entering details smoother.
+<br>
 Further actionable insights can be drawn as the users who just opened the payment wudget take further steps to initiate a payment submission in order to better investigate the critical stages where the users are dropping oof from the funnel.
 
 ### Flagging upsell oppurtunities for the sales team
