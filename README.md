@@ -78,7 +78,10 @@ GROUP BY paymentfunnelstage
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/44f900ae-2205-472c-b680-2cd8d81485f6)
 
 #### Analysis
-Out of all the users that started the payment process, half have successfully completed it. Seven of them have at this stage just opened the payment widget while two of them have encountered a payment related error being either of a user error with entering the payment information or an issue with the payment processing vendor. At this stage, its safe to say that the payment process is rather smooth. More clearer insights can be drawn as the 7 users who have just started the process, proceed along the payment funnel.
+There are 25 total users out of which 12 (roughly half of the total users) have successfully signed up for the product subscription. 7 of them have opened the paymnet widget but haven't taken any further steps. A samll chunk of users are facing some technical issues with the payment processing either on the vendor side or due to their own user error. At this stage some of the following measures can be taken: 
+* Investigating and fixing vendor-related payment processing issues to prevent user frustration.
+* Focus on reducing the drop-off from opening the widget to entering payment details by simplifying it's design and making the transition to entering details smoother.<br>
+Further actionable insights can be drawn as the users who just opened the payment wudget take further steps to initiate a payment submission in order to better investigate the critical stages where the users are dropping oof from the funnel.
 
 ### Flagging upsell oppurtunities for the sales team
 The product team has just launched a new product offering that can be aded on top of the current subscription for an increase in the customer's annual fee. The sales team first wants to test it by reaching out to a select group of customers to get their feedback before offering it to the entire customer base.
