@@ -86,7 +86,7 @@ There are 25 total users out of which 12 (roughly half of the total users) have 
 Further actionable insights can be drawn as the users who just opened the payment wudget take further steps to initiate a payment submission in order to better investigate the critical stages where the users are dropping oof from the funnel.
 
 ### Flagging upsell oppurtunities for the sales team
-The product team has just launched a new product offering that can be aded on top of the current subscription for an increase in the customer's annual fee. The sales team first wants to test it by reaching out to a select group of customers to get their feedback before offering it to the entire customer base.
+The product team has just launched a new product offering that can be added on top of the current subscription for an increase in the customer's annual fee. The sales team first wants to test it by reaching out to a select group of customers to get their feedback before offering it to the entire customer base.
 
 They are reaching out to ptential customers that meet one of the following conditions:
 
@@ -108,6 +108,7 @@ GROUP BY CustomerID
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/f6810901-331a-4cd6-b26d-f09e014681a8)
 
 #### Analysis
+The results show that customers with IDs 29335, 55533, 82772, 93888 are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or satisfy both conditions.
 
 ### Tracking user activity with frontend events
 The design team has recently redesigned the customer support page.They want to run an A/B test in order to gauge how the newly designed page performs compared to the original one. They need the analytics team to track user activity via frontend events such as button clicking, page viewing etc to better inform the product team for future iterations. The experiment results will be sued to make the final prodcut reccomendations.
