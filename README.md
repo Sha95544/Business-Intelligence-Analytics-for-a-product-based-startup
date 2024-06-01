@@ -260,8 +260,8 @@ ON s.SALESEMPLOYEEID = e.EMPLOYEEID
 
 #### Analysis
 The following are the key insights from the sales quota progress report shown above:
-*The sales representative with the employee ID "E738" has performed the best among all the other sales representatives since by almost the third quarter of 2023, they have achieved 14% above their yearly sales quota. Thus they are entitled to receive an additional amount above their pre-decided yearly commision for putting in the extra efforts for the buisness.<br>
-*The representative with employee ID "E172" follows in this trail; having reached 76% of their yearly quota by the third quarter of 2023 and then by "E192" who have reached 65% of their yearly sales quota by the second quarter of 2023. 
-*"E192" haven't made a sale in the third quarter of 2023 unlike the other sales reps.
-*The performance of "E429" is concerning since they have only reached 26% of their yearly sales quota by the third quarter of 2023. They seriously need to take a more proactive approach if they wish to receive a significant proportion of their yearly sales commision for 2023.
-*To conclude, "E738" have contributed the most to the yearly sales revenue while "E429" have contributed the least.
+* The sales representative with the employee ID "E738" has performed the best among all the other sales representatives since by almost the third quarter of 2023, they have achieved 14% above their yearly sales quota. Thus they are entitled to receive an additional amount above their pre-decided yearly commision for putting in the extra efforts for the buisness.<br>
+* The representative with employee ID "E172" follows in this trail; having reached 76% of their yearly quota by the third quarter of 2023 and then by "E192" who have reached 65% of their yearly sales quota by the second quarter of 2023. 
+* "E192" haven't made a sale in the third quarter of 2023 unlike the other sales reps.
+* The performance of "E429" is concerning since they have only reached 26% of their yearly sales quota by the third quarter of 2023. They seriously need to take a more proactive approach if they wish to receive a significant proportion of their yearly sales commision for 2023.
+* To conclude, "E738" have contributed the most to the yearly sales revenue while "E429" have contributed the least.
