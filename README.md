@@ -140,7 +140,9 @@ The results above show the number of times an individual user has performed a ce
 
 
 ### Expiration of all active subscriptions
-The cheif growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn.
+The cheif growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn.<br>
+Because of data modeling limitations, the company was prevented from putting both products in the same table, so there are currently separate tables for each product, "subscriptionsproduct1" and "subscriptionsproduct2". Now it is the job of the analytics team to combine data from these multiple sources to count the number of active product subscriptions that are going to expire every year.
+
 #### Code
 ```sql
 WITH all_subscriptions AS(
