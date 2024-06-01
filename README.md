@@ -140,7 +140,8 @@ The results above show the number of times an individual user has performed a ce
 
 
 ### Expiration of all active subscriptions
-The cheif growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn.<br>
+The chief growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn.<br>
+
 Because of data modeling limitations, the company was prevented from putting both products in the same table, so there are currently separate tables for each product, "subscriptionsproduct1" and "subscriptionsproduct2". Now it is the job of the analytics team to combine data from these multiple sources to count the number of active product subscriptions that are going to expire every year.
 
 #### Code
@@ -164,9 +165,10 @@ GROUP BY exp_year
 #### Analysis
 
 ### Analyzing Subscription cancellation reasons
-As the chief growth officer is tackling customer churn one of their key questions is understadning the factors why users are not renewing their subscriptions. Is it because they are not satsified with the product? Are they leaving for a competitor?. 
+As the chief growth officer is tackling customer churn one of their key questions is understadning the factors why users are not renewing their subscriptions. Is it because they are not satsified with the product? Are they leaving for a competitor?. <br>
 
-Since the economy is quite hard lately, I as a member of the analytics team first decide to find the percentage of users who cancelled their subscription due to the product being too expensive.
+When users decide to cancel their subscription, they're able to select up to three reasons for canceling out of a preset list. Users can't select the same reason twice, and some users may even select less than three reasons and have "nu11" values in some of the cancelation reason columns. Since the economy has been tough lately, the analytics teams finds it reasonable to first pull the percent of canceled subscriptions that canceled due to the product being too expensive.
+
 #### Code
 ```sql
 WITH all_cancelation_reasons AS(
@@ -191,7 +193,7 @@ FROM all_cancelation_reasons
 
 
 #### Analysis
-
+The reuslts reveal a significant insight that about half the users (50%) that cancelled their product subscriptions did so because they found the product to be too expensive. Thus, the business would need to reconsider it's future pricing startegies in efforts to reduce the customer churn.
 
 ### Notifying the sales team of an important business change
 The VP of Sales wants to notify all the managers who have direct reports in the sales department regarding an important business chnage that will affect the sales team. 
