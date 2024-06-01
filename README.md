@@ -165,9 +165,9 @@ GROUP BY exp_year
 
 
 #### Analysis
-The results show that 5 of the buisness's active subscriptions will expire in 2023 which is more than double the total of active subscriptions that wil expire in 2024. So due to the much higher number of subscriptions expiring in the present year, it is viable for the growth officer to strategically design marketing strategies and product campaigns for 2023 in order to drive users to renew their subscriptions for achieving a psoitive growth for the buisness.
+The results show that 5 of the buisness's active subscriptions will expire in 2023 which is more than double the total of active subscriptions that wil expire in 2024. So due to the much higher number of subscriptions expiring in the present year, it is viable for the growth officer to strategically design marketing strategies and product campaigns for 2023 in order to drive users to renew their subscriptions and thus prevent a future loss for the business.
 
-### Analyzing Subscription cancellation reasons
+### Analyzing subscription cancellation reasons
 As the chief growth officer is tackling customer churn one of their key questions is understadning the factors why users are not renewing their subscriptions. Is it because they are not satsified with the product? Are they leaving for a competitor?. <br>
 
 When users decide to cancel their subscription, they're able to select up to three reasons for canceling out of a preset list. Users can't select the same reason twice, and some users may even select less than three reasons and have "nu11" values in some of the cancelation reason columns. Since the economy has been tough lately, the analytics teams finds it reasonable to first pull the percent of canceled subscriptions that canceled due to the product being too expensive.
@@ -199,9 +199,10 @@ FROM all_cancelation_reasons
 The reuslts reveal a significant insight that about half the users (50%) that cancelled their product subscriptions did so because they found the product to be too expensive. Thus, the business would need to reconsider it's future pricing startegies in efforts to reduce the customer churn.
 
 ### Notifying the sales team of an important business change
-The VP of Sales wants to notify all the managers who have direct reports in the sales department regarding an important business chnage that will affect the sales team. 
+The VP of Sales wants to notify all the managers who have direct reports in the sales department regarding an important business chnage that will affect the sales team. In an ideal sceanrio a simple report with the employee name along with the name of their manager and the manager's email address would have sufficed.<br>
 
-However the data has certain limitations such as a manager is not logged for several employees within the database. So the query will be modified in a way to pull directly the email addresses of the employees who dont have a manager's email addresses logged in.
+However the data has certain limitations such as a manager is not logged for several employees within the database. So the query will be modified in a way to pull directly the email addresses of those employees who dont have a manager's email addresses logged in or a 'null' in place of a manager's email address .<br>
+
 #### Code
 ```sql
 SELECT employees.EMPLOYEEID, employees.NAME AS employee_name,
@@ -214,6 +215,7 @@ WHERE employees.DEPARTMENT='Sales'
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/0691e472-63b0-4106-9b3b-49fd42a1f06a)
 
 #### Analysis
+The results above show that the manager for employees with IDs 'E738' and 'E192'is Bonnie Clark who is email is directly pulled in the rows for these employees. However since Bonnie Clarke and Roy Martin don't have a manager logged in, so the query pulls their employee email instad in order to directly notify them about the buisness change.
 
 ### Comparing Month over Month (MoM) revenue
 Its time for the end of the year reporting and manager of the analytics team needs a report of the top revenue highlights for the year suggesting the we highlight the months where the revenue was up Month over Month (MoM) i.e to highlight the monthhs where the revenue was up from the previous month. The following query will be used for the task:
