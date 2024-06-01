@@ -108,10 +108,16 @@ GROUP BY CustomerID
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/f6810901-331a-4cd6-b26d-f09e014681a8)
 
 #### Analysis
-The results show that customers with IDs 29335, 55533, 82772, 93888 are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or satisfy both conditions.
+The results show that customers with IDs 29335, 55533, 82772, 93888 are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or either satisfy both conditions.
 
 ### Tracking user activity with frontend events
-The design team has recently redesigned the customer support page.They want to run an A/B test in order to gauge how the newly designed page performs compared to the original one. They need the analytics team to track user activity via frontend events such as button clicking, page viewing etc to better inform the product team for future iterations. The experiment results will be sued to make the final prodcut reccomendations.
+The design team has recently redesigned the customer support page and want to run an A/B test in order to gauge how the newly designed page performs compared to the original one.<br>
+The users will be randomly assigned into two groups: control and treatment. The users in control group will see the current customer support page, and the users in treatment will see the new page design. The analytics team needs to track user activity via frontend events (button clicking, page viewing, etc.) to inform the product team for future iterations. At the end of the experiment, the results of the control and treatment group will be compared to make a final product recommendation.<br>
+The analytics team decides that it will be important to track user activity and ticket submissions on the customer support page since they could be impacted, either positively or negatively, by the design changes. The follwoing events will be tracked:
+* When a user views the help center page: ViewedHelpCenterPage
+* When a user clicks on the Frequently Asked Questions link: ClickedFAQs
+* When a user clicks the contact customer support button: ClickedContactSupport 
+* When a user clicks the submit ticket button: SubmittedTicket
 #### Code
 ```sql
 SELECT UserID,
@@ -130,6 +136,7 @@ GROUP BY NUM_LINK_CLICKS
 
 
 #### Analysis
+The results above show the number of times an individual user has performed a certain action on the customer support page such as navigating to the FAQ section or viewing the help center page etc. This event tracking would be quite useful in the A/B test.
 
 
 ### Expiration of all active subscriptions
