@@ -108,7 +108,7 @@ GROUP BY CustomerID
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/f6810901-331a-4cd6-b26d-f09e014681a8)
 
 #### Analysis
-The results show that customers with IDs 29335, 55533, 82772, 93888 are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or either satisfy both conditions.
+The results show that customers with IDs "29335", "55533", "82772", "93888" are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or either satisfy both conditions.
 
 ### Tracking user activity with frontend events
 The design team has recently redesigned the customer support page and want to run an A/B test in order to gauge how the newly designed page performs compared to the original one.<br>
@@ -140,9 +140,11 @@ The results above show the number of times an individual user has performed a ce
 
 
 ### Expiration of all active subscriptions
-The chief growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn.<br>
+The chief growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn. <br>
 
-Because of data modeling limitations, the company was prevented from putting both products in the same table, so there are currently separate tables for each product, "subscriptionsproduct1" and "subscriptionsproduct2". Now it is the job of the analytics team to combine data from these multiple sources to count the number of active product subscriptions that are going to expire every year.
+She is planning to launch multiple product experiments and marketing campaigns throughout 2023 to drive users to renew their subscriptions. She is paritcularly interested in understanding the impact that the churn initiative will have on the business.<br>
+
+Because of data modeling limitations, the company was prevented from putting both products in the same table, so there are currently separate tables for each product, "subscriptionsproduct1" and "subscriptionsproduct2". Now it is the job of the analytics team to combine data from these multiple sources to find the number of active product subscriptions that are going to expire in the present and upcoming years.
 
 #### Code
 ```sql
@@ -163,6 +165,7 @@ GROUP BY exp_year
 
 
 #### Analysis
+The results show that 5 of the buisness's active subscriptions will expire in 2023 which is more than double the total of active subscriptions that wil expire in 2024. So due to the much higher number of subscriptions expiring in the present year, it is viable for the growth officer to strategically design marketing strategies and product campaigns for 2023 in order to drive users to renew their subscriptions for achieving a psoitive growth for the buisness.
 
 ### Analyzing Subscription cancellation reasons
 As the chief growth officer is tackling customer churn one of their key questions is understadning the factors why users are not renewing their subscriptions. Is it because they are not satsified with the product? Are they leaving for a competitor?. <br>
