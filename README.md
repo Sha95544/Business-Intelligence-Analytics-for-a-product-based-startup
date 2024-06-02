@@ -265,3 +265,38 @@ The following are the key insights from the sales quota progress report shown ab
 * "E192" haven't made a sale in the third quarter of 2023 unlike the other sales reps.
 * The performance of "E429" is concerning since they have only reached 26% of their yearly sales quota by the third quarter of 2023. They seriously need to take a more proactive approach if they wish to receive a significant proportion of their yearly sales commision for 2023.
 * To conclude, "E738" have contributed the most to the yearly sales revenue while "E429" have contributed the least.
+
+
+### Tracking User Payment Funnel Times
+A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for subscriptionid= 38844.<br>
+
+As subscriptions move through the payment statuses, they are logged in the "paymentstatuslog" table using the statusid to show what status they moved to. They can go back and forth and move through statuses multiple times.<br>
+
+
+Each step of the payment process from the user point of view is outlined below:
+1. The user opens the widget to initiate the payment process.
+2. The user types in their credit card information.
+3. The user clicks the "submit" button to complete their part of the payment process.
+4. The product sends the data to the third-party payment company.
+5. The third-party payment company completes the transaction and reports back.
+
+#### Code
+```sql
+SELECT SalesEmployeeID, SaleDate, SaleAmount,
+SUM(SaleAmount) OVER (PARTITION BY SalesEmployeeID
+ORDER BY SaleDate) AS RUNNING_TOTAL,
+CAST(SUM(SaleAmount) OVER (PARTITION BY SalesEmployeeID
+ORDER BY SaleDate) AS FLOAT) / Quota AS PERCENT_QUOTA
+FROM Sales s
+INNER JOIN Employees e
+ON s.SALESEMPLOYEEID = e.EMPLOYEEID
+```
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/c3d9bae1-6942-4e80-8b8e-8e97b58f0004)
+
+#### Analysis
+The following are the key insights from the sales quota progress report shown above:
+* The sales representative with the employee ID "E738" has performed the best among all the other sales representatives since by almost the third quarter of 2023, they have achieved 14% above their yearly sales quota. Thus they are entitled to receive an additional amount above their pre-decided yearly commision for putting in the extra efforts for the buisness.<br>
+* The representative with employee ID "E172" follows in this trail; having reached 76% of their yearly quota by the third quarter of 2023 and then by "E192" who have reached 65% of their yearly sales quota by the second quarter of 2023. 
+* "E192" haven't made a sale in the third quarter of 2023 unlike the other sales reps.
+* The performance of "E429" is concerning since they have only reached 26% of their yearly sales quota by the third quarter of 2023. They seriously need to take a more proactive approach if they wish to receive a significant proportion of their yearly sales commision for 2023.
+* To conclude, "E738" have contributed the most to the yearly sales revenue while "E429" have contributed the least.
