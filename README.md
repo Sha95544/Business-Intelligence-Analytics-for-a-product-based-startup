@@ -268,7 +268,7 @@ The following are the key insights from the sales quota progress report shown ab
 
 
 ### Tracking User Payment Funnel Times
-A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for subscriptionid= 38844.<br>
+A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for "subscriptionid= 38844".<br>
 
 As subscriptions move through the payment statuses, they are logged in the "paymentstatuslog" table using the statusid to show what status they moved to. They can go back and forth and move through statuses multiple times.<br>
 
@@ -280,23 +280,22 @@ Each step of the payment process from the user point of view is outlined below:
 4. The product sends the data to the third-party payment company.
 5. The third-party payment company completes the transaction and reports back.
 
+This process is converted into statusid s using the following ID to definition mapping below and stored in the "statusdefinition" table:
+
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/aefc94b5-4a4c-4005-ba14-e511198ff465)
+
+The analytics team will pull the payment funnel data for subscriptionid = 38844. For each status timestamp, the time difference between that timestamp and the next chronological timestamp will be calculated in order to show how long the user was in each status before moving to the next status.
 #### Code
 ```sql
-SELECT SalesEmployeeID, SaleDate, SaleAmount,
-SUM(SaleAmount) OVER (PARTITION BY SalesEmployeeID
-ORDER BY SaleDate) AS RUNNING_TOTAL,
-CAST(SUM(SaleAmount) OVER (PARTITION BY SalesEmployeeID
-ORDER BY SaleDate) AS FLOAT) / Quota AS PERCENT_QUOTA
-FROM Sales s
-INNER JOIN Employees e
-ON s.SALESEMPLOYEEID = e.EMPLOYEEID
+SELECT *,
+ LEAD(MOVEMENTDATE,1) OVER (PARTITION BY SUBSCRIPTIONID ORDER BY MOVEMENTDATE) AS NEXTSTATUSMOVEMENTDATE,
+ LEAD(MOVEMENTDATE,1) OVER (PARTITION BY SUBSCRIPTIONID ORDER BY MOVEMENTDATE) - MOVEMENTDATE AS TIMEINSTATUS
+FROM PaymentStatusLog
+WHERE SUBSCRIPTIONID = '38844'
+ORDER BY MOVEMENTDATE
 ```
-![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/c3d9bae1-6942-4e80-8b8e-8e97b58f0004)
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/bc275c9b-072c-49ba-a30d-ee215350d54c)
+
 
 #### Analysis
-The following are the key insights from the sales quota progress report shown above:
-* The sales representative with the employee ID "E738" has performed the best among all the other sales representatives since by almost the third quarter of 2023, they have achieved 14% above their yearly sales quota. Thus they are entitled to receive an additional amount above their pre-decided yearly commision for putting in the extra efforts for the buisness.<br>
-* The representative with employee ID "E172" follows in this trail; having reached 76% of their yearly quota by the third quarter of 2023 and then by "E192" who have reached 65% of their yearly sales quota by the second quarter of 2023. 
-* "E192" haven't made a sale in the third quarter of 2023 unlike the other sales reps.
-* The performance of "E429" is concerning since they have only reached 26% of their yearly sales quota by the third quarter of 2023. They seriously need to take a more proactive approach if they wish to receive a significant proportion of their yearly sales commision for 2023.
-* To conclude, "E738" have contributed the most to the yearly sales revenue while "E429" have contributed the least.
+Based on the results above, it can be seen that the customer was in each status of the payment funnel for just a couple of seconds. The only noticeable time delay of 15 seoconds was observed in the statuses of the user getting the first system error message (statusid = 0) to correctly typing out their credit card information (statusid = 2). This time differance is quite naturally expected and other than that the entire payment process took less than a minute. Thus, the customer wasn't particularly 'stuck' in a particular status for too long as they claim to be.
