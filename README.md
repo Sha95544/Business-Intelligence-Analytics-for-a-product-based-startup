@@ -1,5 +1,5 @@
 # Business Intelligence (BI) Analytics for a product based startup
-# Project Overview
+## Project Overview
 Throughout this project, I will be acting as the member of the analytics team for a product based startup, solving a wide range of real world buisness problems in collaboration with various stakeholders at the firm.
 ## Project Toolkit
 The entire analysis for the project was done using SQL within MySQL. A wide range of SQL functionalities were explored over the course of the project such as:
@@ -10,7 +10,9 @@ The entire analysis for the project was done using SQL within MySQL. A wide rang
 * Date-time fucntions such as 'DATE_TRUNC()'.
 * Functions to find and fill in null values such as 'COALESCE()'.
 * Window functions such as 'PARTITION BY()', 'RANK()', 'ROW_NUMBER()', 'LEAD()' etc.
-  
+
+## Background of the business
+
 ## Main Data Model
 The entire data model / entity relationship digram for the firm is shown below with multiple fact and dimension tables:
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
