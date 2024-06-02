@@ -1,4 +1,4 @@
-# Business-Intelligence-Analytics-for-a-product-based-startup
+# Business Intelligence (BI) Analytics for a product based startup
 ## Main Data Model
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
 ## Tools Used
