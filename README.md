@@ -19,7 +19,7 @@ The entire data model / entity relationship digram for the firm is shown below w
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
 ## Solving Key Business Problems
 ### Descriptive statistics for monthly revenue by product
-#### __Business Problem__
+#### Business Problem
 The leadership team at the company is making goals for 2023 and wants to understand how much revenue each of the product subscriptions, 'basic' and 'expert' are generating each month. More specifically, they want to understand the distribution of monthly revenue across the past year, 2022.<br>
 
 They've asked you the following questions:
@@ -54,7 +54,13 @@ GROUP BY ProductName;
 #### Analysis
 The expert product subscription genertaed more revenue than the basic one over the months however had a higher standard deviation. So although the "expert" product subscription generated a higher revenue, the revenue from the basic subscription was more consistent across the months and centered across the mean. <br><br>
 ### Tracking the performance of a recent email campaign
+#### Business Problem
+A manager on the marketing team comes to you to ask about the performance of their recent email campaign. Now that the campaign has been launched, the marketing manager wants to know how many users have clicked the link in the email. <br>
+
+While this project was being planned, the analysts collaborated with the front-end engineers to create tracking events for the front end of the product located in the **'frontendeventlog'** table. One of these events, **eventid = 5**, is logged when the user reaches a unique landing page that is only accessed from this campaign email. Since the event tracks when a user views the unique landing page from the email, tracking eventid = 5 will be the best method to count how many users have clicked the link in the campaign email.
+
 #### Code
+Since an overall aggregate metric like an average can hide outliers and further insights under the hood, it's best to calculate the distribution of the **number of email link clicks per user**. In other words, how many users clicked the email link one time, two times, three times, and so on?
 ```sql
 WITH Clicks_per_user AS(
 SELECT USERID, COUNT(EVENTID) AS NUM_LINK_CLICKS
