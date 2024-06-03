@@ -19,6 +19,15 @@ The entire data model / entity relationship digram for the firm is shown below w
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
 ## Solving Key Business Problems
 ### Descriptive statistics for monthly revenue by product
+#### **Business Problmem**
+The leadership team at the company is making goals for 2023 and wants to understand how much revenue each of the product subscriptions, 'basic' and 'expert' are generating each month. More specifically, they want to understand the distribution of monthly revenue across the past year, 2022.<br>
+
+They've asked you the following questions:
+1. How much revenue does each product usually generate each month?
+2. Which product had the most success throughout all of last year?
+3. Did either product fluctuate greatly each month or was the month-to-month trend fairly consistent?
+
+The query below can be used to accomplish this task:
 #### Code
 ```sql
 WITH Monthly_Rev AS(
