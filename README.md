@@ -11,7 +11,8 @@ The entire analysis for the project was done using SQL within MySQL. A wide rang
 * Functions to find and fill in null values such as 'COALESCE()'.
 * Window functions such as 'PARTITION BY()', 'RANK()', 'ROW_NUMBER()', 'LEAD()' etc.
 
-## Background of the business
+## Background
+The business in question here is a product based company offering 'basic' and 'expert' level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialble till the end of 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates the analysis taking place during the year 2023.
 
 ## Main Data Model
 The entire data model / entity relationship digram for the firm is shown below with multiple fact and dimension tables:
