@@ -19,7 +19,7 @@ The entire data model / entity relationship digram for the firm is shown below w
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
 ## Solving Key Business Problems
 ### Descriptive statistics for monthly revenue by product
-#### **Business Problmem**
+#### __Business Problem__
 The leadership team at the company is making goals for 2023 and wants to understand how much revenue each of the product subscriptions, 'basic' and 'expert' are generating each month. More specifically, they want to understand the distribution of monthly revenue across the past year, 2022.<br>
 
 They've asked you the following questions:
