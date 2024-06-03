@@ -12,7 +12,7 @@ The entire analysis for the project was done using SQL within MySQL. A wide rang
 * Window functions such as 'PARTITION BY()', 'RANK()', 'ROW_NUMBER()', 'LEAD()' etc.
 
 ## Background
-The business in question here is a product based company offering 'basic' and 'expert' level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialble till the end of 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates the analysis taking place during the year 2023.
+The business in question here is a product based company offering **'basic'** and **'expert'** level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialble till the end of 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates the analysis taking place during the year 2023.
 
 ## Main Data Model
 The entire data model / entity relationship digram for the firm is shown below with multiple fact and dimension tables:
@@ -75,10 +75,23 @@ GROUP BY NUM_LINK_CLICKS
 ```
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/62b96912-981e-4d6a-8167-87b719c5989f)<br>
 #### Analysis
-Based on the results obtained, it can be seen that about half of the users returned to the email to click on the link  multiple times in order to reach a unique landing page that could only be accesed from within the campaign email. These insigts would be useful for the marketing team in order to understand how the users are interacting with the email link.<br><br>
+Based on the results obtained, it can be seen that about half of the users returned to the email to click on the link multiple times in order to reach a unique landing page that could only be accesed from within the campaign email. These insigts would be useful for the marketing team in order to understand how the users are interacting with the email link.<br><br>
 
 ### Payment Funnel Analysis
-Understanding the farthest point the users are getting to within the payment process and where they are dropping off. This is a request from the product manager
+#### Business Problem
+The product manager has requested a payment funnel analysis from the analytics team; she wants to understand what the furthest point in the payment process users are getting to and where users are falling out of the process. She wants to have full visibility into each possible stage of the payment process from the user's point of view.<br>
+
+Here's the payment process a user goes through when signing up for a subscription:
+1. The user opens the widget to initiate payment process.
+2. The user types in credit card information.
+3. The user clicks the submit button to complete their part of the payment process.
+4. The product sends the data to the third-party payment processing company.
+5. The payment company completes the transaction and reports back with "complete."
+
+This process is converted into statusids using the following mapping in the **"statusdefinition"** table below:
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/c94d29c2-d0e4-4014-8d80-b413cffc63cf)
+
+
 #### Code
 ```sql
 WITH Max_Stage AS(
