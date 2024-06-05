@@ -154,12 +154,15 @@ The results show that customers with IDs "29335", "55533", "82772", "93888" are 
 
 ### Tracking user activity with frontend events
 The design team has recently redesigned the customer support page and want to run an A/B test in order to gauge how the newly designed page performs compared to the original one.<br>
+
 The users will be randomly assigned into two groups: control and treatment. The users in control group will see the current customer support page, and the users in treatment will see the new page design. The analytics team needs to track user activity via frontend events (button clicking, page viewing, etc.) to inform the product team for future iterations. At the end of the experiment, the results of the control and treatment group will be compared to make a final product recommendation.<br>
+
 The analytics team decides that it will be important to track user activity and ticket submissions on the customer support page since they could be impacted, either positively or negatively, by the design changes. The follwoing events will be tracked:
 * When a user views the help center page: ViewedHelpCenterPage
 * When a user clicks on the Frequently Asked Questions link: ClickedFAQs
 * When a user clicks the contact customer support button: ClickedContactSupport 
 * When a user clicks the submit ticket button: SubmittedTicket
+
 #### Code
 ```sql
 SELECT UserID,
@@ -339,5 +342,8 @@ ORDER BY MOVEMENTDATE
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/bc275c9b-072c-49ba-a30d-ee215350d54c)
 
 
-#### Analysis
+#### **Analysis**
 Based on the results above, it can be seen that the customer was in each status of the payment funnel for just a couple of seconds. The only noticeable time delay of 15 seoconds was observed in the statuses of the user getting the first system error message (statusid = 0) to correctly typing out their credit card information (statusid = 2). This time differance is quite naturally expected and other than that the entire payment process took less than a minute. Thus, the customer wasn't particularly 'stuck' in a particular status for too long as they claim to be.
+
+## Conclusion
+This project can be further enhanced by making an end to end dashboard using both SQL and a visualization tool to present key insights in a visually appealing format to prospective stakeholders.
