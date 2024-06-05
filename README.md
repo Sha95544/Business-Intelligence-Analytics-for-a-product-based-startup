@@ -310,7 +310,7 @@ The following are the key insights from the sales quota progress report shown ab
 
 
 ### Tracking User Payment Funnel Times
-A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for "subscriptionid= 38844".<br>
+A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for **"subscriptionid= 38844"**.<br>
 
 As subscriptions move through the payment statuses, they are logged in the "paymentstatuslog" table using the statusid to show what status they moved to. They can go back and forth and move through statuses multiple times.<br>
 
