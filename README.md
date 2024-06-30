@@ -287,6 +287,8 @@ datediff('Month',previous_month.Month,current_month.Month) = 1
 The results show that the revenue was up in July and then again in October 2022. The revenue in July was double that of June 2022 amounting to $32,000 while the revenue increase from September to October was quite less, totalling to about $1000. As the reports presents only the months where the revenue was up Month over Month (MoM), it can be concluded that the business saw the most significant growth between June and July in the year 2022. To summarize, these results show that the business was more profitable in the middle of the year 2022 than it was at either at the start or the end of it.
 
 ### Tracking Sales Quota progress over time
+![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/3004a8ec-a336-48a2-bb5e-4ac924dcfcfe)
+
 The sales team works diligently to sell the product, and they have quotas that they must reach in order to earn all of their commission. Because these goals are so intimately tied to revenue, the manager of the team wants to track each sales member's performance throughout the year.<br>
 
 The sales manager expresses her concern that a single metric such as the % of quota reached won't give her visibility into the progress of the represenatatives throughout the year. Thus the analytics team suggests providing a "running_total of sales revenue" and a "percent_quota metric" that will be recalculated every time a sales member makes another sale. The query below will be used to accomplish this task:
