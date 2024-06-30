@@ -1,6 +1,10 @@
 # Business Intelligence (BI) Analytics for a product based startup
 ## Project Overview
 Throughout this project, I will be acting as the member of the analytics team for a product based startup, solving a wide range of real world buisness problems in collaboration with various stakeholders at the firm.
+
+## Background
+The business in question here is a product based company offering **'basic'** and **'expert'** level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialable till the end of the year 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates all the analytical tasks taking place during the year 2023.
+
 ## Project Toolkit
 The entire analysis for the project was done using SQL within MySQL. A wide range of SQL functionalities were explored over the course of the project such as:
 * INNER JOINS and SELF JOINS.
@@ -11,13 +15,10 @@ The entire analysis for the project was done using SQL within MySQL. A wide rang
 * Functions to find and fill in null values such as 'COALESCE()'.
 * Window functions such as 'PARTITION BY()', 'RANK()', 'ROW_NUMBER()', 'LEAD()' etc.
 
-## Background
-The business in question here is a product based company offering **'basic'** and **'expert'** level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialble till the end of 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates the analysis taking place during the year 2023.
-
 ## Main Data Model
 The entire data model / entity relationship digram for the firm is shown below with multiple fact and dimension tables:
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24cc2b86-4014-4c6e-b548-4164a2010414)
-## Solving Key Business Problems
+## Solutions to Key Buisness Problems
 ### Descriptive statistics for monthly revenue by product
 #### Business Problem
 The leadership team at the company is making goals for 2023 and wants to understand how much revenue each of the product subscriptions, 'basic' and 'expert' are generating each month. More specifically, they want to understand the distribution of monthly revenue across the past year, 2022.<br>
