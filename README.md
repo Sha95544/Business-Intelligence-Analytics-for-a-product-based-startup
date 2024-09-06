@@ -1,6 +1,6 @@
-# Business Intelligence (BI) Analytics for a product based startup
+# Business Intelligence (BI) Analytics for a SaaS Company in SQL
 ## Project Overview
-Throughout this project, I will be acting as the member of the analytics team for a product based startup, solving a wide range of real world buisness problems in collaboration with various stakeholders at the firm.
+Throughout this project, I will be acting as the member of the analytics team for a SaaS company, solving a wide range of real world buisness problems in collaboration with various stakeholders at the firm.
 
 ## Background
 The business in question here is a product based company offering **'basic'** and **'expert'** level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialable till the end of the year 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates all the analytical tasks taking place during the year 2023.
