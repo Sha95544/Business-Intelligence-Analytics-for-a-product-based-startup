@@ -6,7 +6,7 @@ Throughout this project, I will be acting as the member of the analytics team fo
 The business in question here is a product based company offering **'basic'** and **'expert'** level subscriptions to a diverse clientale. For the scope of this project, the company's data is avaialable till the end of the year 2022. This data will be used to make decisions for 2023 and onwards. In other words, the project simulates all the analytical tasks taking place during the year 2023.
 
 ## Project Toolkit
-The entire analysis for the project was done using SQL within MySQL. A wide range of SQL functionalities were explored over the course of the project such as:
+The entire analysis for the project was done using SQL. A wide range of SQL functionalities were explored over the course of the project such as:
 * INNER JOINS and SELF JOINS.
 * UNION and UNION ALL.
 * Common Table Expressions (CTEs).
