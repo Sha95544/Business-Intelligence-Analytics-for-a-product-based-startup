@@ -129,6 +129,7 @@ There are 25 total users out of which 12 (roughly half of the total users) have 
 Further actionable insights can be drawn as the users who just opened the payment wudget take further steps to initiate a payment submission in order to better investigate the critical stages where the users are dropping oof from the funnel.
 
 ### Flagging upsell oppurtunities for the sales team
+#### Business Problem
 The product team has just launched a new product offering that can be added on top of the current subscription for an increase in the customer's annual fee. The sales team first wants to test it by reaching out to a select group of customers to get their feedback before offering it to the entire customer base.
 
 They are reaching out to ptential customers that meet one of the following conditions:
@@ -154,6 +155,7 @@ GROUP BY CustomerID
 The results show that customers with IDs "29335", "55533", "82772", "93888" are an upsell oppurtunity for the business as they either have subscription for just a single product or have atleast 5000 or more registered users or either satisfy both conditions.
 
 ### Tracking user activity with frontend events
+#### Business Problem
 The design team has recently redesigned the customer support page and want to run an A/B test in order to gauge how the newly designed page performs compared to the original one.<br>
 
 The users will be randomly assigned into two groups: control and treatment. The users in control group will see the current customer support page, and the users in treatment will see the new page design. The analytics team needs to track user activity via frontend events (button clicking, page viewing, etc.) to inform the product team for future iterations. At the end of the experiment, the results of the control and treatment group will be compared to make a final product recommendation.<br>
@@ -186,6 +188,7 @@ The results above show the number of times an individual user has performed a ce
 
 
 ### Expiration of all active subscriptions
+#### Business Problem
 The chief growth officer wants to know when all the active subscriptios are going to expire as part of a broader effort to reduce customer churn. <br>
 
 She is planning to launch multiple product experiments and marketing campaigns throughout 2023 to drive users to renew their subscriptions. She is paritcularly interested in understanding the impact that the churn initiative will have on the business.<br>
@@ -214,6 +217,7 @@ GROUP BY exp_year
 The results show that 5 of the buisness's active subscriptions will expire in 2023 which is more than double the total of active subscriptions that wil expire in 2024. So due to the much higher number of subscriptions expiring in the present year, it is viable for the growth officer to strategically design marketing strategies and product campaigns for 2023 in order to drive users to renew their subscriptions and thus prevent a future loss for the business.
 
 ### Analyzing subscription cancellation reasons
+#### Business Problem
 As the chief growth officer is tackling customer churn one of their key questions is understadning the factors why users are not renewing their subscriptions. Is it because they are not satsified with the product? Are they leaving for a competitor?. <br>
 
 When users decide to cancel their subscription, they're able to select up to three reasons for canceling out of a preset list. Users can't select the same reason twice, and some users may even select less than three reasons and have "nu11" values in some of the cancelation reason columns. Since the economy has been tough lately, the analytics teams finds it reasonable to first pull the percent of canceled subscriptions that canceled due to the product being too expensive.
@@ -245,6 +249,7 @@ FROM all_cancelation_reasons
 The reuslts reveal a significant insight that about half the users (50%) that cancelled their product subscriptions did so because they found the product to be too expensive. Thus, the business would need to reconsider it's future pricing startegies in efforts to reduce the customer churn.
 
 ### Notifying the sales team of an important business change
+#### Business Problem
 The VP of Sales wants to notify all the managers who have direct reports in the sales department regarding an important business chnage that will affect the sales team. In an ideal sceanrio a simple report with the employee name along with the name of their manager and the manager's email address would have sufficed.<br>
 
 However the data has certain limitations such as a manager is not logged for several employees within the database. So the query will be modified in a way to pull directly the email addresses of those employees who dont have a manager's email addresses logged in or a 'null' in place of a manager's email address .<br>
@@ -264,6 +269,7 @@ WHERE employees.DEPARTMENT='Sales'
 The results above show that the manager for employees with IDs 'E738' and 'E192'is Bonnie Clark who is email is directly pulled in the rows for these employees. However since Bonnie Clarke and Roy Martin don't have a manager logged in, so the query pulls their employee email instad in order to directly notify them about the buisness change.
 
 ### Comparing Month over Month (MoM) revenue
+#### Business Problem
 Its time for the end of the year reporting and manager of the analytics team needs a report of the top revenue highlights for the year suggesting the analytics team highlights the months where the revenue was up Month over Month (MoM) i.e to highlight the months where the revenue was up from the previous month. The following query will be used for the task:
 #### Code
 ```sql
@@ -288,6 +294,7 @@ datediff('Month',previous_month.Month,current_month.Month) = 1
 The results show that the revenue was up in July and then again in October 2022. The revenue in July was double that of June 2022 amounting to $32,000 while the revenue increase from September to October was quite less, totalling to about $1000. As the reports presents only the months where the revenue was up Month over Month (MoM), it can be concluded that the business saw the most significant growth between June and July in the year 2022. To summarize, these results show that the business was more profitable in the middle of the year 2022 than it was at either at the start or the end of it.
 
 ### Tracking Sales Quota progress over time
+#### Business Problem
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/3004a8ec-a336-48a2-bb5e-4ac924dcfcfe)
 
 The sales team works diligently to sell the product, and they have quotas that they must reach in order to earn all of their commission. Because these goals are so intimately tied to revenue, the manager of the team wants to track each sales member's performance throughout the year.<br>
@@ -316,6 +323,7 @@ The following are the key insights from the sales quota progress report shown ab
 
 
 ### Tracking User Payment Funnel Times
+#### Business Problem
 A customer has complained that it took too long for them complete their payment process due to there being an error with the system. The customer support team brought this issue up and asked the analytics team to investigate the payment funnel time data for **"subscriptionid= 38844"**.<br>
 
 As subscriptions move through the payment statuses, they are logged in the "paymentstatuslog" table using the statusid to show what status they moved to. They can go back and forth and move through statuses multiple times.<br>
