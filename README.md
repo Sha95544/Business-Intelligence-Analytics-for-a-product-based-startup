@@ -178,7 +178,6 @@ JOIN FrontendEventDefinitions fed
 ON fel.EventID = fed.EventID
 WHERE EventType = 'Customer Support'
 GROUP BY fel.UserID
-GROUP BY NUM_LINK_CLICKS
 ```
 ![image](https://github.com/Sha95544/Business-Intelligence-Analytics-for-a-product-based-startup/assets/62758405/24bf5b7c-7032-4504-82be-6a5ae760d96b)
 
